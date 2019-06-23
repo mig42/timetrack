@@ -28,7 +28,7 @@ before_install:
 - lfs_zip="git-lfs-$([ "$TRAVIS_OS_NAME" == "linux" ] && echo "linux" || echo "darwin")-amd64-1.2.1.tar.gz"
 - echo $lfs_zip
 - curl -LO https://github.com/github/git-lfs/releases/download/v1.2.1/$lfs_zip
-- tar -zxf -C /tmp/git-lfs --strip-components 1 $lfs_zip
+- tar -zx -C /tmp/git-lfs --strip-components 1 -f $lfs_zip
 - cd "$old_pwd"
 - /tmp/git-lfs/git-lfs pull
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils; fi
