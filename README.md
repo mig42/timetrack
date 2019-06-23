@@ -1,5 +1,7 @@
 # timetrack
 
+[![Build Status](https://travis-ci.org/mig42/timetrack.svg?branch=master)](https://travis-ci.org/mig42/timetrack) [![Build status](https://ci.appveyor.com/api/projects/status/59kvyauc5604nq92?svg=true)](https://ci.appveyor.com/project/mig42/timetrack)
+
 > An app to track and register work time
 
 #### Build Setup
