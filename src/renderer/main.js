@@ -3,6 +3,7 @@ import Buefy from 'buefy';
 import axios from 'axios';
 
 import 'buefy/dist/buefy.css';
+import 'material-design-icons/iconfont/material-icons.css';
 
 import App from './App';
 import router from './router';
