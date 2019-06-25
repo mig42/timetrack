@@ -1,23 +1,19 @@
 <template>
-  <section class="">
-    <div class="">
+  <v-container>
+    <v-layout xs12>
       <Banner />
-    </div>
+    </v-layout>
 
-    <div class="">
-      <div class="">
-        <div class="">
-          <div class="">
-            <Timer />
-          </div>
-        </div>
-      </div>
-    </div>
+    <v-layout xs12>
+      <v-flex>
+        <Timer />
+      </v-flex>
+    </v-layout>
 
-    <div class="">
+    <v-layout xs12>
       <Footer />
-    </div>
-  </section>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

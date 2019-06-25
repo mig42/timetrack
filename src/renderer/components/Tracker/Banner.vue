@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <v-flex>
     <div class="">
       <div class="">
         <h1 class="">TimeTrack</h1>
@@ -8,7 +8,7 @@
         <img id="logo" src="~@/assets/logo.png" alt="TimeTrack" />
       </div>
     </div>
-  </div>
+  </v-flex>
 </template>
 
 <script>
