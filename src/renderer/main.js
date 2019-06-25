@@ -2,9 +2,6 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import axios from 'axios';
 
-import 'vuetify/dist/vuetify.min.css';
-import 'material-design-icons-iconfont/dist/material-design-icons.css';
-
 import App from './App';
 import db from './datastore';
 import router from './router';
@@ -15,12 +12,13 @@ Vue.http = Vue.prototype.$http = axios;
 Vue.db = Vue.prototype.$db = db;
 Vue.config.productionTip = false;
 
-Vue.use(Vuetify);
+Vue.use(Vuetify, {
+  iconfont: 'md',
+});
 
 /* eslint-disable no-new */
 new Vue({
-  components: { App },
   router,
   store,
-  template: '<App/>',
+  render: h => h(App),
 }).$mount('#app');
