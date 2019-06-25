@@ -1,14 +1,12 @@
 <template>
-  <v-flex>
+  <div class="">
     <div class="">
-      <div class="">
-        <h1 class="">TimeTrack</h1>
-      </div>
-      <div class="">
-        <img id="logo" src="~@/assets/logo.png" alt="TimeTrack" />
-      </div>
+      <h1 class="">TimeTrack</h1>
     </div>
-  </v-flex>
+    <div class="">
+      <img id="logo" src="~@/assets/logo.png" alt="TimeTrack" />
+    </div>
+  </div>
 </template>
 
 <script>

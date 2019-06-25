@@ -1,17 +1,21 @@
 <template>
   <v-container>
-    <v-layout xs12>
-      <Banner />
+    <v-layout row>
+      <v-flex xs12>
+        <Banner />
+      </v-flex>
     </v-layout>
 
-    <v-layout xs12>
-      <v-flex>
+    <v-layout row>
+      <v-flex xs12>
         <Timer />
       </v-flex>
     </v-layout>
 
-    <v-layout xs12>
-      <Footer />
+    <v-layout row>
+      <v-flex xs12>
+        <Footer />
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
