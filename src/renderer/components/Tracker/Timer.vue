@@ -1,5 +1,5 @@
 <template>
-  <div class="has-text-right">
+  <div class="">
     Timer placeholder
   </div>
 </template>

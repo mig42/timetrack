@@ -1,10 +1,10 @@
 <template>
-  <div class="container main-padding">
-    <div class="columns is-vcentered">
-      <div class="column is-two-thirds">
-        <h1 class="title">TimeTrack</h1>
+  <div class="">
+    <div class="">
+      <div class="">
+        <h1 class="">TimeTrack</h1>
       </div>
-      <div class="column">
+      <div class="">
         <img id="logo" src="~@/assets/logo.png" alt="TimeTrack" />
       </div>
     </div>
@@ -16,11 +16,3 @@ export default {
   name: 'Banner',
 };
 </script>
-
-<style scoped>
-.main-padding {
-  padding: 3rem 0 3rem 0;
-}
-</style>
-
-

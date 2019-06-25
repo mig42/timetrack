@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer">
-    <div class="content has-text-centered">
+  <footer class="">
+    <div class="">
       <p>
         <strong>TimeTrack</strong> by <a href="https://github.com/mig42">Miguel González</a>
         – <i>{{ year }}</i> –

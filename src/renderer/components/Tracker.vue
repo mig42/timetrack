@@ -1,20 +1,20 @@
 <template>
-  <section class="hero">
-    <div class="hero-head">
+  <section class="">
+    <div class="">
       <Banner />
     </div>
 
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
+    <div class="">
+      <div class="">
+        <div class="">
+          <div class="">
             <Timer />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="hero-foot">
+    <div class="">
       <Footer />
     </div>
   </section>
@@ -34,9 +34,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.h-100 {
-  height: 100%;
-}
-</style>
