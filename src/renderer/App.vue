@@ -1,20 +1,30 @@
 <template>
   <v-app id="root">
-    <v-navigation-drawer app></v-navigation-drawer>
-    <v-toolbar app></v-toolbar>
+    <toolbar />
     <v-content>
       <v-container fluid>
-        <router-view></router-view>
+        <v-layout row>
+          <v-flex xs12>
+            <router-view></router-view>
+          </v-flex>
+        </v-layout>
       </v-container>
     </v-content>
-    <v-footer app></v-footer>
+    <footer />
   </v-app>
 </template>
 
 <script>
-  export default {
-    name: 'timetrack',
-  };
+import Toolbar from './components/Toolbar';
+import Footer from './components/Footer';
+
+export default {
+  name: 'timetrack',
+  components: {
+    Toolbar,
+    Footer,
+  },
+};
 </script>
 
 <style lang="stylus">
