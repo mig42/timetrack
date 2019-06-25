@@ -10,19 +10,19 @@
         </v-layout>
       </v-container>
     </v-content>
-    <footer />
+    <app-footer />
   </v-app>
 </template>
 
 <script>
 import Toolbar from './components/Toolbar';
-import Footer from './components/Footer';
+import AppFooter from './components/AppFooter';
 
 export default {
   name: 'timetrack',
   components: {
     Toolbar,
-    Footer,
+    AppFooter,
   },
 };
 </script>

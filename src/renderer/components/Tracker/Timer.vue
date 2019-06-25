@@ -3,7 +3,7 @@
     <v-container>
       <v-layout row wrap>
         <v-card flat tile>
-          try
+          Placeholder
         </v-card>
       </v-layout>
     </v-container>
