@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import Buefy from 'buefy';
+import Vuetify from 'vuetify';
 import axios from 'axios';
 
-import 'buefy/dist/buefy.css';
-import 'material-design-icons/iconfont/material-icons.css';
+import 'vuetify/dist/vuetify.min.css';
+import 'material-design-icons-iconfont/dist/material-design-icons.css';
 
 import App from './App';
 import router from './router';
@@ -13,7 +13,7 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'));
 Vue.http = Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
 
-Vue.use(Buefy);
+Vue.use(Vuetify);
 
 /* eslint-disable no-new */
 new Vue({
