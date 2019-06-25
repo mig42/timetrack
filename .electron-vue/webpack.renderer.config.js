@@ -56,7 +56,7 @@ let rendererConfig = {
         use: ['vue-style-loader', 'css-loader', 'less-loader']
       },
       {
-        test: /\.styl(us)?$/,
+        test: /\.styl$/,
         use: ['vue-style-loader', 'css-loader', 'stylus-loader']
       },
       {
