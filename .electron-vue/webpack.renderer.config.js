@@ -11,6 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 /**
  * List of node_modules to include in webpack bundle
@@ -55,6 +56,10 @@ let rendererConfig = {
         use: ['vue-style-loader', 'css-loader', 'less-loader']
       },
       {
+        test: /\.styl(us)?$/,
+        use: ['vue-style-loader', 'css-loader', 'stylus-loader']
+      },
+      {
         test: /\.css$/,
         use: ['vue-style-loader', 'css-loader']
       },
@@ -78,9 +83,10 @@ let rendererConfig = {
           options: {
             extractCSS: process.env.NODE_ENV === 'production',
             loaders: {
-              sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1&data=@import "./src/renderer/style/globals"',
-              scss: 'vue-style-loader!css-loader!sass-loader?data=@import "./src/renderer/style/globals"',
-              less: 'vue-style-loader!css-loader!less-loader'
+              sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
+              scss: 'vue-style-loader!css-loader!sass-loader',
+              less: 'vue-style-loader!css-loader!less-loader',
+              styl: 'vue-style-loader!css-loader!stylus-loader'
             }
           }
         }
@@ -134,6 +140,7 @@ let rendererConfig = {
         ? path.resolve(__dirname, '../node_modules')
         : false
     }),
+    new VuetifyLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
