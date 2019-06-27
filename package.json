@@ -70,6 +70,7 @@
     "vuex-electron": "^1.0.0"
   },
   "devDependencies": {
+    "@mdi/font": "^3.7.95",
     "ajv": "^6.5.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
@@ -111,6 +112,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^4.0.2",
+    "material-design-icons-iconfont": "^5.0.1",
     "mini-css-extract-plugin": "0.4.0",
     "mocha": "^5.2.0",
     "multispinner": "^0.2.1",
