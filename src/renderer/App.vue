@@ -5,7 +5,7 @@
       <v-container fluid>
         <v-layout row>
           <v-flex xs12>
-            <router-view></router-view>
+            <router-view />
           </v-flex>
         </v-layout>
       </v-container>
@@ -19,7 +19,7 @@ import Toolbar from './components/Toolbar';
 import AppFooter from './components/AppFooter';
 
 export default {
-  name: 'timetrack',
+  name: 'Timetrack',
   components: {
     Toolbar,
     AppFooter,
