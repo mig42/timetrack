@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
+/* eslint-disable import/no-extraneous-dependencies */
+import VueTimers from 'vue-timers';
 import axios from 'axios';
 
 import App from './App';
@@ -19,6 +21,8 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify, {
   iconfont: 'md',
 });
+
+Vue.use(VueTimers);
 
 /* eslint-disable no-new */
 new Vue({
