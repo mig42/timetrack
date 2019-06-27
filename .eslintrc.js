@@ -23,7 +23,7 @@ module.exports = {
   plugins: [
     'vue'
   ],
-  'rules': {
+  rules: {
     'global-require': 0,
     'import/no-unresolved': 0,
     'no-param-reassign': 0,
@@ -32,6 +32,13 @@ module.exports = {
     'import/newline-after-import': 0,
     'no-multi-assign': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'vue/max-attributes-per-line': [ 'error', {
+      'singleline': 4,
+      'multiline': {
+        'max': 1,
+        'allowFirstLine': true
+      }
+    }]
   }
 }
