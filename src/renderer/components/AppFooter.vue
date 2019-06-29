@@ -1,5 +1,5 @@
 <template>
-  <v-footer app height="auto" color="primary lighten-3">
+  <v-footer app height="auto" color="secondary">
     <v-layout justify-center row wrap>
       <v-flex py-3 text-xs-center white--text xs12>
         <external-link href="https://github.com/mig42">
