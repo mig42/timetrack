@@ -1,15 +1,27 @@
 <template>
-  <v-container>
-    <v-layout row>
+  <v-container grid-list-lg>
+    <v-layout row wrap>
       <v-flex xs12 md6>
-        <timer-control v-model="taskId"
-                       :running="timers.updateSeconds.isRunning"
-                       @start="start"
-                       @stop="stop"
-        />
+        <v-container fluid fill-height ma-0 pa-0>
+          <v-layout row wrap ma-0 pa-0>
+            <v-flex ma-0 pa-0>
+              <timer-control v-model="taskId"
+                             :running="timers.updateSeconds.isRunning"
+                             @start="start"
+                             @stop="stop"
+              />
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-flex>
       <v-flex xs12 md6>
-        <display :elapsed="elapsedSeconds" />
+        <v-container fluid fill-height ma-0 pa-0>
+          <v-layout row wrap ma-0 pa-0>
+            <v-flex ma-0 pa-0>
+              <display :elapsed="elapsedSeconds" />
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-flex>
     </v-layout>
   </v-container>

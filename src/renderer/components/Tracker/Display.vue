@@ -1,6 +1,8 @@
 <template>
-  <v-card flat tile>
-    {{ hours }} : {{ minutes }} : {{ seconds }}
+  <v-card class="fill-height">
+    <v-card-text>
+      {{ hours }} : {{ minutes }} : {{ seconds }}
+    </v-card-text>
   </v-card>
 </template>
 
