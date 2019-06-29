@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app color="primary">
+  <v-toolbar app color="accent">
     <v-toolbar-title>TimeTrack</v-toolbar-title>
   </v-toolbar>
 </template>

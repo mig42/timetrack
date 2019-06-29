@@ -20,6 +20,16 @@ Vue.config.productionTip = false;
 
 Vue.use(Vuetify, {
   iconfont: 'md',
+  theme: {
+    primary: '#10be6a',
+    secondary: '#545454',
+    tertiary: '#ffa015',
+    accent: '#8eec14',
+    error: '#f55a4e',
+    info: '#00d3ee',
+    success: '#5cb860',
+    warning: '#ffa21a',
+  },
 });
 
 Vue.use(VueTimers);

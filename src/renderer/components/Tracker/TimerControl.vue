@@ -16,7 +16,7 @@
           </v-flex>
           <v-flex shrink>
             <v-btn v-if="!running"
-                   color="success"
+                   color="primary"
                    large
                    :disabled="!taskId"
                    @click="start"
