@@ -1,6 +1,17 @@
 <template>
   <v-container grid-list-lg>
-    <v-layout row wrap>
+    <v-layout row wrap justify-center>
+      <v-flex xs12 md6>
+        <v-container fluid fill-height ma-0 pa-0>
+          <v-layout row wrap ma-0 pa-0>
+            <v-flex ma-0 pa-0>
+              <display :elapsed="elapsedSeconds" />
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap justify-center>
       <v-flex xs12 md6>
         <v-container fluid fill-height ma-0 pa-0>
           <v-layout row wrap ma-0 pa-0>
@@ -10,15 +21,6 @@
                              @start="start"
                              @stop="stop"
               />
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-flex>
-      <v-flex xs12 md6>
-        <v-container fluid fill-height ma-0 pa-0>
-          <v-layout row wrap ma-0 pa-0>
-            <v-flex ma-0 pa-0>
-              <display :elapsed="elapsedSeconds" />
             </v-flex>
           </v-layout>
         </v-container>
