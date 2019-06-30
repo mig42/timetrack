@@ -12,7 +12,7 @@ function padDigits(number) {
 }
 
 export default {
-  name: 'TimerControl',
+  name: 'Display',
   props: {
     elapsed: {
       type: Number,
