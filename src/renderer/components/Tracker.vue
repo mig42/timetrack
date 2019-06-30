@@ -2,7 +2,7 @@
   <v-container grid-list-lg>
     <v-layout row wrap justify-center>
       <v-flex xs12 sm10 md9 lg6>
-        <display :elapsed="elapsedSeconds" />
+        <display :elapsed="elapsedSeconds" :running="timers.updateSeconds.isRunning" />
       </v-flex>
     </v-layout>
     <v-layout row wrap justify-center>

@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :color="color">
     <v-card-text class="display-4 font-weight-bold text-xs-center">
       {{ hours }}:{{ minutes }}:{{ seconds }}
     </v-card-text>
@@ -18,6 +18,10 @@ export default {
       type: Number,
       default: 0,
     },
+    running: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     hours() {
@@ -28,6 +32,9 @@ export default {
     },
     seconds() {
       return padDigits(this.elapsed % 60);
+    },
+    color() {
+      return this.running ? 'accent' : '';
     },
   },
 };
