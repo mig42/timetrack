@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-lg>
     <v-layout row wrap justify-center>
-      <v-flex xs12 md6>
+      <v-flex xs12 sm10 md9 lg6>
         <v-container fluid fill-height ma-0 pa-0>
           <v-layout row wrap ma-0 pa-0>
             <v-flex ma-0 pa-0>
@@ -12,7 +12,7 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap justify-center>
-      <v-flex xs12 md6>
+      <v-flex xs12 sm10 md9 lg6>
         <v-container fluid fill-height ma-0 pa-0>
           <v-layout row wrap ma-0 pa-0>
             <v-flex ma-0 pa-0>
