@@ -19,6 +19,7 @@
             <v-btn v-if="!running"
                    color="primary"
                    large
+                   class="mx-0"
                    :disabled="!taskId || isInputInvalid"
                    @click="start"
             >
@@ -27,6 +28,7 @@
             <v-btn v-if="running"
                    color="error"
                    large
+                   class="mx-0"
                    @click="stop"
             >
               Stop
