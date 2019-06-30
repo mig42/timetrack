@@ -1,7 +1,7 @@
 <template>
-  <v-card class="fill-height">
-    <v-card-text>
-      {{ hours }} : {{ minutes }} : {{ seconds }}
+  <v-card color="tertiary">
+    <v-card-text class="display-4 font-weight-bold">
+      {{ hours }}:{{ minutes }}:{{ seconds }}
     </v-card-text>
   </v-card>
 </template>

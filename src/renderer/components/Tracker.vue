@@ -2,28 +2,16 @@
   <v-container grid-list-lg>
     <v-layout row wrap justify-center>
       <v-flex xs12 sm10 md9 lg6>
-        <v-container fluid fill-height ma-0 pa-0>
-          <v-layout row wrap ma-0 pa-0>
-            <v-flex ma-0 pa-0>
-              <display :elapsed="elapsedSeconds" />
-            </v-flex>
-          </v-layout>
-        </v-container>
+        <display :elapsed="elapsedSeconds" />
       </v-flex>
     </v-layout>
     <v-layout row wrap justify-center>
       <v-flex xs12 sm10 md9 lg6>
-        <v-container fluid fill-height ma-0 pa-0>
-          <v-layout row wrap ma-0 pa-0>
-            <v-flex ma-0 pa-0>
-              <timer-control v-model="taskId"
-                             :running="timers.updateSeconds.isRunning"
-                             @start="start"
-                             @stop="stop"
-              />
-            </v-flex>
-          </v-layout>
-        </v-container>
+        <timer-control v-model="taskId"
+                       :running="timers.updateSeconds.isRunning"
+                       @start="start"
+                       @stop="stop"
+        />
       </v-flex>
     </v-layout>
   </v-container>
