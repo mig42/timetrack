@@ -8,9 +8,10 @@
               <v-text-field v-model.number="taskId"
                             label="TTS ID"
                             clearable
-                            type="number"
+                            :rules="[rules.required, rules.numeric, rules.natural]"
                             :disabled="running"
-                            @input="$emit('input', taskId)"
+                            @update:error="val => isInputInvalid = val"
+                            @input="debouncedUpdateValue"
               />
             </div>
           </v-flex>
@@ -18,7 +19,7 @@
             <v-btn v-if="!running"
                    color="primary"
                    large
-                   :disabled="!taskId"
+                   :disabled="!taskId || isInputInvalid"
                    @click="start"
             >
               Start
@@ -38,6 +39,8 @@
 </template>
 
 <script>
+import { debounce } from 'lodash';
+
 export default {
   name: 'TimerControl',
   props: {
@@ -52,8 +55,19 @@ export default {
   },
   data() {
     return {
-      taskId: 0,
+      isInputInvalid: true,
+      taskId: null,
+      rules: {
+        required: value => !!value || 'Required.',
+        numeric: value => value === ''
+          || !Number.isNaN(parseInt(value, 10))
+          || 'Value must be a number.',
+        natural: value => value > 0 || 'Value must be greater than zero.',
+      },
     };
+  },
+  created() {
+    this.debouncedUpdateValue = debounce(this.updateValue, 250);
   },
   methods: {
     start() {
@@ -61,6 +75,12 @@ export default {
     },
     stop() {
       this.$emit('stop');
+    },
+    updateValue() {
+      if (this.isInputInvalid) {
+        return;
+      }
+      this.$emit('input', this.taskId);
     },
   },
 };
