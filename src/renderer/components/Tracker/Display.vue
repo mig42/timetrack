@@ -1,6 +1,6 @@
 <template>
   <v-card color="tertiary">
-    <v-card-text class="display-4 font-weight-bold">
+    <v-card-text class="display-4 font-weight-bold text-xs-center">
       {{ hours }}:{{ minutes }}:{{ seconds }}
     </v-card-text>
   </v-card>
