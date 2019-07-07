@@ -3,7 +3,8 @@
     <toolbar />
     <v-content>
       <v-container fluid>
-        <v-layout row>
+        <v-layout row justify-center>
+          <login-dialog v-if="!isLoggedIn" />
           <v-flex xs12>
             <router-view />
           </v-flex>
@@ -15,14 +16,20 @@
 </template>
 
 <script>
-import Toolbar from './components/Toolbar';
+import { mapGetters } from 'vuex';
 import AppFooter from './components/AppFooter';
+import LoginDialog from './components/LoginDialog';
+import Toolbar from './components/Toolbar';
 
 export default {
   name: 'Timetrack',
   components: {
-    Toolbar,
     AppFooter,
+    LoginDialog,
+    Toolbar,
+  },
+  computed: {
+    ...mapGetters('auth', ['isLoggedIn']),
   },
 };
 </script>
