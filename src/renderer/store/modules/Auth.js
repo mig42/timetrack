@@ -32,6 +32,7 @@ const mutations = {
 
 const getters = {
   isLoggedIn: state => !!state.password,
+  user: state => state.user,
 };
 
 const actions = {
