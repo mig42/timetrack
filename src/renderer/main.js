@@ -18,6 +18,8 @@ Vue.http = Vue.prototype.$http = axios;
 Vue.db = Vue.prototype.$db = db;
 Vue.config.productionTip = false;
 
+axios.defaults.baseURL = 'http://juno.codicefactory.com/tts';
+
 Vue.use(Vuetify, {
   iconfont: 'md',
   theme: {
