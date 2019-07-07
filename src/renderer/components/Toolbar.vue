@@ -10,11 +10,20 @@
         </h1>
       </div>
     </v-toolbar-title>
+    <v-spacer />
+    <div v-if="isLoggedIn">
+      {{ user }}
+    </div>
   </v-toolbar>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'Toolbar',
+  computed: {
+    ...mapGetters('auth', ['isLoggedIn', 'user']),
+  },
 };
 </script>
