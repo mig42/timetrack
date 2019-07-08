@@ -1,5 +1,10 @@
 <template>
-  <v-navigation-drawer :value="isDrawerOpen" app temporary @input="drawerChanged($event)">
+  <v-navigation-drawer :value="isDrawerOpen"
+                       :permanent="!isLoggedIn"
+                       app
+                       temporary
+                       @input="drawerChanged($event)"
+  >
     <v-toolbar flat class="transparent">
       <v-list class="pa-0">
         <v-list-tile avatar>
