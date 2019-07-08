@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app temporary :permanent="!isLoggedIn">
+  <v-navigation-drawer :value="isDrawerOpen" app temporary @input="drawerChanged($event)">
     <v-toolbar flat class="transparent">
       <v-list class="pa-0">
         <v-list-tile avatar>
@@ -48,9 +48,20 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  name: 'Timetrack',
+  name: 'Drawer',
+  props: {
+    isDrawerOpen: {
+      type: Boolean,
+      default: false,
+    },
+  },
   computed: {
     ...mapGetters('auth', ['isLoggedIn', 'user']),
+  },
+  methods: {
+    drawerChanged(newValue) {
+      this.$emit('update:isDrawerOpen', newValue);
+    },
   },
 };
 </script>

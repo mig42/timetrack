@@ -1,7 +1,7 @@
 <template>
   <v-app id="root">
-    <drawer />
-    <toolbar />
+    <drawer :is-drawer-open.sync="isDrawerOpen" />
+    <toolbar :is-drawer-open.sync="isDrawerOpen" />
     <v-content>
       <v-container fluid>
         <v-layout row justify-center>
@@ -26,6 +26,11 @@ export default {
     AppFooter,
     Drawer,
     Toolbar,
+  },
+  data() {
+    return {
+      isDrawerOpen: false,
+    };
   },
 };
 </script>
